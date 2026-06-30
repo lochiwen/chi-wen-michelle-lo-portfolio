@@ -520,11 +520,14 @@ body.is-editing .profile-crop-controls {
 
 .case-study-page h1 {
   max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: clamp(2.9rem, 7vw, 6.2rem);
 }
 
 .back-link {
   display: inline-flex;
+  margin-left: max(0px, calc((100% - 940px)/2));
   width: fit-content;
   min-height: 40px;
   align-items: center;
@@ -552,6 +555,8 @@ body.is-editing .profile-crop-controls {
 
 .case-study-hero {
   max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 0;
 }
 
@@ -630,10 +635,13 @@ body.is-editing .profile-crop-controls {
 .case-study-page > .case-panel {
   margin-top: 18px;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .case-study-page > .case-panel {
   max-width: 940px;
+  width: min(940px, 100%);
   box-sizing: border-box;
 }
 
