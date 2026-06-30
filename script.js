@@ -2,6 +2,11 @@ const links = [...document.querySelectorAll(".nav-links a")];
 const sections = links
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const canUseEditor = ["localhost", "127.0.0.1", ""].includes(window.location.hostname) || window.location.protocol === "file:";
+if (canUseEditor) {
+  document.body.classList.add("can-edit");
+}
+
 const editToggle = document.querySelector("[data-edit-toggle]");
 const editReset = document.querySelector("[data-edit-reset]");
 const editStatus = document.querySelector("[data-edit-status]");
@@ -30,6 +35,10 @@ const profileCropInputs = [...document.querySelectorAll("[data-profile-crop-inpu
 const profileCropKey = `${storagePrefix}profile-crop-outpainted-v1`;
 const defaultProfileCrop = { zoom: 1, x: 0, y: -88 };
 let editing = false;
+
+if (!canUseEditor) {
+  document.querySelector(".edit-toolbar")?.remove();
+}
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -86,7 +95,7 @@ editableItems.forEach((item, index) => {
   const legacyKey = `${legacyStoragePrefix}${index}`;
   item.dataset.editableKey = key;
   item.dataset.legacyEditableKey = legacyKey;
-  const saved = localStorage.getItem(key) ?? localStorage.getItem(legacyKey);
+  const saved = canUseEditor ? localStorage.getItem(key) ?? localStorage.getItem(legacyKey) : null;
 
   if (saved !== null) {
     item.textContent = saved;
@@ -126,7 +135,7 @@ function syncProfileCropInputs(crop) {
   });
 }
 
-if (profileCropPreview && profileCropInputs.length) {
+if (canUseEditor && profileCropPreview && profileCropInputs.length) {
   const savedCrop = getSavedProfileCrop();
   applyProfileCrop(savedCrop);
   syncProfileCropInputs(savedCrop);
@@ -151,6 +160,7 @@ function setStatus(message) {
 }
 
 function setEditing(nextEditing) {
+  if (!canUseEditor) return;
   editing = nextEditing;
   document.body.classList.toggle("is-editing", editing);
   editableItems.forEach((item) => {
@@ -166,6 +176,7 @@ editToggle?.addEventListener("click", () => {
 });
 
 editReset?.addEventListener("click", () => {
+  if (!canUseEditor) return;
   const shouldReset = window.confirm("Reset all edited text back to the original version?");
   if (!shouldReset) return;
 
