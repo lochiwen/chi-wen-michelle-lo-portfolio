@@ -588,10 +588,10 @@ body.is-editing .profile-crop-controls {
 
 .case-study-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: stretch;
-  max-width: 1180px;
+  max-width: 940px;
   margin-bottom: 18px;
 }
 
@@ -630,6 +630,11 @@ body.is-editing .profile-crop-controls {
 .case-study-page > .case-panel {
   margin-top: 18px;
   margin-bottom: 0;
+}
+
+.case-study-page > .case-panel {
+  max-width: 940px;
+  box-sizing: border-box;
 }
 
 .facts-list {
