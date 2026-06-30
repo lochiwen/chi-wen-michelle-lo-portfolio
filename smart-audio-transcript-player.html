@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Smart Audio Transcript Player case study by Chi Wen Michelle Lo: a Figma prototype for replayable listening audio, transcript navigation, and accent-aware pronunciation support."
+    >
+    <title>Smart Audio Transcript Player Case Study | Chi Wen (Michelle) Lo</title>
+    <link rel="stylesheet" href="styles.css?v=36">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Back to portfolio home">
+        <span class="brand-mark">CL</span>
+        <span>
+          <strong>Chi Wen (Michelle) Lo</strong>
+          <small>Learning Experience Designer</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#fit">Job Fit</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="edit-toolbar" aria-label="Page editing tools">
+      <button class="edit-button" type="button" data-edit-toggle>Edit</button>
+      <button class="edit-button ghost" type="button" data-edit-reset>Reset</button>
+      <span class="edit-status" data-edit-status>Click Edit to update text</span>
+    </div>
+
+    <main>
+      <section class="case-study case-study-page" id="smart-audio-case-study" aria-labelledby="smart-audio-title">
+        <a class="back-link" href="index.html#work">Back to projects</a>
+        <div class="case-study-hero">
+          <p class="section-kicker">Project deep dive</p>
+          <h1 id="smart-audio-title">Smart Audio Transcript Player</h1>
+          <p>
+            A Figma prototype for a listening-audio feature that helps language learners replay specific words, follow a
+            synchronized transcript, and hear pronunciation in selected accents.
+          </p>
+        </div>
+
+        <div class="video-panel" aria-label="Smart Audio Transcript Player demo video">
+          <iframe
+            src="https://www.youtube.com/embed/US7o_-IS5sc"
+            title="Smart Audio Transcript Player demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel summary-panel">
+            <p class="section-kicker">Project summary</p>
+            <p>
+              This prototype began from a workplace request at Berlitz. A supervisor shared that students were having
+              trouble replaying individual words in listening-audio materials, so I explored how the audio player could
+              make word-level replay easier.
+            </p>
+            <p>
+              I designed the Figma prototype as a product reference for the LMS partner working with Berlitz. An LMS,
+              or Learning Management System, is software used to deliver courses and learning activities. The goal was
+              to show how Berlitz hoped the listening section in Parta.io, the LMS platform Berlitz was using with a
+              partner company, could support transcript display, pronunciation replay, accent selection, and two-way
+              navigation between audio and transcript.
+            </p>
+          </article>
+
+          <aside class="case-panel">
+            <p class="section-kicker">Product context</p>
+            <dl class="facts-list">
+              <div>
+                <dt>Audience</dt>
+                <dd>Language learners using digital listening materials inside Berlitz's online learning environment.</dd>
+              </div>
+              <div>
+                <dt>Core problem</dt>
+                <dd>Students could not easily replay one missed word without scrubbing through the full listening audio.</dd>
+              </div>
+              <div>
+                <dt>Design medium</dt>
+                <dd>Figma prototype and demo video used to communicate desired listening-audio functionality to an LMS partner.</dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>Feature concept, Figma prototype, interaction flow, transcript/audio behavior, and stakeholder-facing demo explanation.</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Prototype feature set</p>
+            <p>
+              The demo video and transcript show a listening player that makes audio more searchable, replayable, and
+              useful for pronunciation-focused language learning.
+            </p>
+          </div>
+          <ol class="feature-list">
+            <li>
+              <strong>Transcript button</strong>
+              <span>Adds a transcript icon to the audio bar so learners can open the full transcript while listening.</span>
+            </li>
+            <li>
+              <strong>Scrollable transcript</strong>
+              <span>Keeps long transcripts usable inside a popup panel without covering the whole learning page.</span>
+            </li>
+            <li>
+              <strong>Accent selector</strong>
+              <span>Lets learners choose which pronunciation accents, such as American and British, should be available.</span>
+            </li>
+            <li>
+              <strong>Selected-state feedback</strong>
+              <span>Shows a check mark after an accent is selected, so learners know which options are active.</span>
+            </li>
+            <li>
+              <strong>Hover-to-reveal audio</strong>
+              <span>Highlights a transcript word on hover and reveals a sound icon beside the word.</span>
+            </li>
+            <li>
+              <strong>Word-level replay</strong>
+              <span>Lets learners click a word in the transcript to hear that word's pronunciation instead of replaying the full audio.</span>
+            </li>
+            <li>
+              <strong>Accent-specific playback</strong>
+              <span>Plays the selected accent pronunciations in sequence, and highlights the accent currently being played.</span>
+            </li>
+            <li>
+              <strong>Vocabulary and phrase support</strong>
+              <span>Extends the same sound-icon behavior to vocabulary and phrase lists, with the icon visible all the time.</span>
+            </li>
+            <li>
+              <strong>Audio-to-transcript sync</strong>
+              <span>Marks the word currently being read in the transcript so learners do not have to search manually.</span>
+            </li>
+            <li>
+              <strong>Transcript-to-audio seeking</strong>
+              <span>Lets learners click a transcript word to move the audio bar to that word's timestamp.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel">
+            <p class="section-kicker">Interaction flow</p>
+            <p>
+              The prototype starts from a familiar audio bar and adds a transcript icon. When learners open the
+              transcript, they can scroll through the text, choose available accents, and interact directly with words.
+            </p>
+            <ul class="insight-list">
+              <li>Opening the transcript keeps listening, reading, and replay in one place.</li>
+              <li>Hover states make interactive words discoverable without adding constant visual noise.</li>
+              <li>Accent menus give learners control over which pronunciation models they want to hear.</li>
+              <li>Two-way sync lets learners move from audio to transcript or from transcript back to audio.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <p class="section-kicker">Learning rationale</p>
+            <p>
+              The design supports listening comprehension by reducing the friction between noticing a missed word and
+              hearing it again. It also supports pronunciation awareness by letting learners compare accent models.
+            </p>
+            <ul class="insight-list">
+              <li>Word-level replay supports focused listening instead of broad trial-and-error rewinding.</li>
+              <li>Synchronized highlighting helps learners connect sound, spelling, and transcript context.</li>
+              <li>Accent selection makes pronunciation support more flexible for different learning goals.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Design decisions</p>
+            <p>
+              The prototype uses small interaction details to make the feature understandable to learners and feasible
+              for product stakeholders to review.
+            </p>
+          </div>
+          <div class="principle-grid">
+            <article>
+              <h3>Keep the player familiar</h3>
+              <p>The transcript icon is added to the existing audio bar so the new feature feels like an extension of the current listening workflow.</p>
+            </article>
+            <article>
+              <h3>Prevent text blocking</h3>
+              <p>The transcript popup is scrollable, and the accent control is positioned so it does not cover the transcript text.</p>
+            </article>
+            <article>
+              <h3>Make states visible</h3>
+              <p>Hover highlights, sound icons, green checks, and active accent highlights show what can be clicked and what is currently playing.</p>
+            </article>
+            <article>
+              <h3>Design for implementation</h3>
+              <p>The Figma prototype translates a learner pain point into concrete behaviors the LMS partner could inspect and build from.</p>
+            </article>
+          </div>
+        </div>
+
+        <article class="case-panel">
+          <p class="section-kicker">Portfolio takeaway</p>
+          <p>
+            Smart Audio Transcript Player shows my ability to turn a learner complaint into a concrete product feature,
+            prototype the interaction details, and communicate language-learning requirements to platform stakeholders.
+          </p>
+          <ul class="insight-list">
+            <li>Designed a listening support feature around a real student pain point.</li>
+            <li>Connected audio, transcript, pronunciation, and navigation into one learner workflow.</li>
+            <li>Created a Figma demo to help an LMS partner understand the desired functionality for Parta.io.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Chi Wen (Michelle) Lo</span>
+      <span>Smart Audio Transcript Player Case Study</span>
+    </footer>
+
+    <script src="script.js?v=11"></script>
+  </body>
+</html>

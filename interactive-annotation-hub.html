@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Interactive Annotation Hub case study by Chi Wen Michelle Lo: a digital note-taking and annotation prototype for language learning."
+    >
+    <title>Interactive Annotation Hub Case Study | Chi Wen (Michelle) Lo</title>
+    <link rel="stylesheet" href="styles.css?v=36">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Back to portfolio home">
+        <span class="brand-mark">CL</span>
+        <span>
+          <strong>Chi Wen (Michelle) Lo</strong>
+          <small>Learning Experience Designer</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#fit">Job Fit</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="edit-toolbar" aria-label="Page editing tools">
+      <button class="edit-button" type="button" data-edit-toggle>Edit</button>
+      <button class="edit-button ghost" type="button" data-edit-reset>Reset</button>
+      <span class="edit-status" data-edit-status>Click Edit to update text</span>
+    </div>
+
+    <main>
+      <section class="case-study case-study-page" id="annotation-hub-case-study" aria-labelledby="annotation-title">
+        <a class="back-link" href="index.html#work">Back to projects</a>
+        <div class="case-study-hero">
+          <p class="section-kicker">Project deep dive</p>
+          <h1 id="annotation-title">Interactive Annotation Hub</h1>
+          <p>
+            A Replit prototype for digital note-taking in language learning, designed to show how students could
+            highlight readings, create sticky annotations, organize notes, and collaborate inside a digital course
+            reading workflow.
+          </p>
+          <div class="case-study-actions">
+            <a
+              class="project-link"
+              href="https://interactive-annotation-hub--name1911434.replit.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open live demo
+            </a>
+          </div>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel summary-panel">
+            <p class="section-kicker">Project summary</p>
+            <p>
+              This prototype began from a workplace need at Berlitz: a supervisor wanted to explore how language
+              students could take notes digitally while reading course content. The goal was to make the desired LMS
+              functionality visible, concrete, and easier for a platform partner to understand. An LMS, or Learning
+              Management System, is software used to deliver courses and learning activities.
+            </p>
+            <p>
+              I designed the feature concept and built the prototype in Replit as a reference for the LMS company
+              working with Berlitz. The prototype demonstrates the kinds of annotation, organization, collaboration,
+              persistence, and export features Berlitz hoped could be considered for Parta.io, the LMS platform Berlitz
+              was using with a partner company.
+            </p>
+          </article>
+
+          <aside class="case-panel">
+            <p class="section-kicker">Product context</p>
+            <dl class="facts-list">
+              <div>
+                <dt>Audience</dt>
+                <dd>Language learners, instructors, and LMS stakeholders who need better reading-based note-taking workflows.</dd>
+              </div>
+              <div>
+                <dt>Core problem</dt>
+                <dd>Students need a way to connect notes directly to reading passages, organize them, and return to them later.</dd>
+              </div>
+              <div>
+                <dt>Design medium</dt>
+                <dd>Interactive Replit prototype used to communicate desired LMS functionality to a platform partner.</dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>Feature ideation, annotation UX design, workflow definition, prototype building, and stakeholder-facing product framing.</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Prototype feature set</p>
+            <p>
+              The prototype models a full annotation workspace, from creating notes inside a document to searching,
+              filtering, exporting, and collaborating around those notes.
+            </p>
+          </div>
+          <ol class="feature-list">
+            <li>
+              <strong>Sticky-note annotations</strong>
+              <span>Students can click anywhere on the document to drop a sticky note when Annotation On mode is active.</span>
+            </li>
+            <li>
+              <strong>Text-linked highlights</strong>
+              <span>Students can highlight text to create an annotation tied to a specific passage, with highlights linked to notes.</span>
+            </li>
+            <li>
+              <strong>Rich note editing</strong>
+              <span>Notes support bold, italic, underline, bulleted lists, numbered lists, tables, images, hyperlinks, and mentions.</span>
+            </li>
+            <li>
+              <strong>Comment threads</strong>
+              <span>Annotations can hold comment threads, allowing students or collaborators to respond to a note.</span>
+            </li>
+            <li>
+              <strong>Eight-color system</strong>
+              <span>Highlights and sticky notes use yellow, orange, red, pink, purple, indigo, blue, and green for visual organization.</span>
+            </li>
+            <li>
+              <strong>Synced color changes</strong>
+              <span>Changing a highlight color updates its linked sticky note, and changing a sticky note updates the linked highlight.</span>
+            </li>
+            <li>
+              <strong>Tags and repository search</strong>
+              <span>Students can tag notes and search by content, tags, colors, and metadata from the repository panel.</span>
+            </li>
+            <li>
+              <strong>Filtered exports</strong>
+              <span>Exports can respect active filters, so learners download only the subset of notes they are currently reviewing.</span>
+            </li>
+            <li>
+              <strong>Repository panel</strong>
+              <span>A central panel shows all annotations and highlights, updates counts in real time, and lets users jump to any note.</span>
+            </li>
+            <li>
+              <strong>Interactive note behavior</strong>
+              <span>Notes expand on hover, edit inline on click, drag to new positions, and can be shown all at once or only on hover.</span>
+            </li>
+            <li>
+              <strong>Contextual controls</strong>
+              <span>Highlights support right-click context menus, hover tooltips, quick color changes, and delete actions.</span>
+            </li>
+            <li>
+              <strong>Persistence and history</strong>
+              <span>Content, positions, colors, tags, and annotation history auto-save to LocalStorage and persist across refreshes.</span>
+            </li>
+            <li>
+              <strong>Export and sharing paths</strong>
+              <span>Annotations can be downloaded as PDF, exported with the document, or shared to Gmail, Google Drive, or Notion.</span>
+            </li>
+            <li>
+              <strong>Multi-user collaboration</strong>
+              <span>The concept includes multi-user viewing, commenting, and @username mentions to tag collaborators.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel">
+            <p class="section-kicker">Learning design rationale</p>
+            <p>
+              For language learners, useful notes are not only private reminders. They are comprehension anchors tied to
+              vocabulary, examples, grammar, cultural meaning, questions, and feedback. The prototype keeps notes close
+              to the exact text that triggered them.
+            </p>
+            <ul class="insight-list">
+              <li>Highlights connect thinking to the source passage instead of separating notes from context.</li>
+              <li>Color categories let learners create personal systems for vocabulary, grammar, questions, and review.</li>
+              <li>The repository supports later study by turning scattered notes into a searchable learning record.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <p class="section-kicker">Stakeholder value</p>
+            <p>
+              The prototype made an abstract LMS feature request tangible. Instead of only describing "digital notes,"
+              it gave the LMS partner a working interaction model for what Berlitz wanted students to be able to do.
+            </p>
+            <ul class="insight-list">
+              <li>Clarified feature expectations for Parta.io discussions.</li>
+              <li>Showed how reading, highlighting, note organization, and collaboration could live in one workflow.</li>
+              <li>Made product conversations easier by giving stakeholders something concrete to inspect and react to.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Interaction model</p>
+            <p>
+              The design gives learners multiple ways to move between the reading surface and their study system.
+            </p>
+          </div>
+          <div class="principle-grid">
+            <article>
+              <h3>Create in context</h3>
+              <p>Click in the document or highlight a passage to create a note exactly where the learning moment happens.</p>
+            </article>
+            <article>
+              <h3>Organize visually</h3>
+              <p>Use synced colors and tags to group annotations by meaning, priority, question type, or review category.</p>
+            </article>
+            <article>
+              <h3>Return quickly</h3>
+              <p>Search, filter, repository jumps, animated scrolling, and counts help learners revisit important notes.</p>
+            </article>
+            <article>
+              <h3>Discuss together</h3>
+              <p>Comment threads, mentions, and multi-user support turn annotations into a collaborative learning space.</p>
+            </article>
+          </div>
+        </div>
+
+        <article class="case-panel">
+          <p class="section-kicker">Portfolio takeaway</p>
+          <p>
+            Interactive Annotation Hub shows my ability to turn an instructional need into a product prototype, define
+            a detailed feature system, and communicate UX requirements to technical and business stakeholders.
+          </p>
+          <ul class="insight-list">
+            <li>Connected language-learning needs to concrete LMS product functionality.</li>
+            <li>Designed annotation, organization, collaboration, and export workflows.</li>
+            <li>Built a working prototype to support stakeholder alignment and platform conversations.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Chi Wen (Michelle) Lo</span>
+      <span>Interactive Annotation Hub Case Study</span>
+    </footer>
+
+    <script src="script.js?v=11"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="TOEFL AI Writing Tutor case study by Chi Wen Michelle Lo: a Custom GPT designed for strict TOEFL writing practice, task flow, timing, and feedback guardrails."
+    >
+    <title>TOEFL AI Writing Tutor Case Study | Chi Wen (Michelle) Lo</title>
+    <link rel="stylesheet" href="styles.css?v=36">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Back to portfolio home">
+        <span class="brand-mark">CL</span>
+        <span>
+          <strong>Chi Wen (Michelle) Lo</strong>
+          <small>Learning Experience Designer</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#fit">Job Fit</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="edit-toolbar" aria-label="Page editing tools">
+      <button class="edit-button" type="button" data-edit-toggle>Edit</button>
+      <button class="edit-button ghost" type="button" data-edit-reset>Reset</button>
+      <span class="edit-status" data-edit-status>Click Edit to update text</span>
+    </div>
+
+    <main>
+      <section class="case-study case-study-page" id="toefl-ai-case-study" aria-labelledby="toefl-ai-title">
+        <a class="back-link" href="index.html#work">Back to projects</a>
+        <div class="case-study-hero">
+          <p class="section-kicker">Project deep dive</p>
+          <h1 id="toefl-ai-title">TOEFL AI Writing Tutor</h1>
+          <p>
+            A working Custom GPT for TOEFL writing practice at Berlitz, designed to give students structured prompts,
+            timed practice, rubric-based feedback, and strict guardrails against answer-writing shortcuts.
+          </p>
+          <div class="case-study-actions">
+            <a
+              class="project-link"
+              href="assets/ai-writing-tutors-prompt.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View full prompt PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel summary-panel">
+            <p class="section-kicker">Project summary</p>
+            <p>
+              This project began from a workplace request at Berlitz: a supervisor wanted a ChatGPT-based TOEFL AI
+              Writing Tutor that students could use for practice. I researched TOEFL writing task formats, timing,
+              response expectations, and rubric-based feedback needs, then designed and built the Custom GPT. The prompt
+              in the Create tab defines the assistant's role, practice flow, task rules, timing behavior, and feedback
+              boundaries.
+            </p>
+            <p>
+              The design focuses on disciplined practice rather than shortcut help. The tutor must not write answers for
+              students, teach before submission, provide sample answers too early, give numerical scores, or predict TOEFL
+              proficiency levels.
+            </p>
+          </article>
+
+          <aside class="case-panel">
+            <p class="section-kicker">Learning context</p>
+            <dl class="facts-list">
+              <div>
+                <dt>Audience</dt>
+                <dd>TOEFL learners who need guided writing practice with clear task boundaries and feedback.</dd>
+              </div>
+              <div>
+                <dt>Core problem</dt>
+                <dd>AI can easily over-help by writing answers, giving premature examples, or turning timed practice into general tutoring.</dd>
+              </div>
+              <div>
+                <dt>Design medium</dt>
+                <dd>Working Custom GPT built with prompt architecture for a TOEFL writing practice assistant.</dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>TOEFL writing research, prompt engineering, task flow design, guardrail writing, feedback sequence, and learner-facing interaction design.</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Practice tasks</p>
+            <p>
+              The tutor supports three TOEFL writing practice formats. Each format has its own structure, so students
+              can practice the selected task without mixed instructions.
+            </p>
+          </div>
+          <ol class="feature-list">
+            <li>
+              <strong>Build a Sentence</strong>
+              <span>Generates three scrambled-word items, each with one question and 7-10 words that allow one grammatically correct solution.</span>
+            </li>
+            <li>
+              <strong>Write an Email</strong>
+              <span>Presents a scenario, exactly three bullet points, a To line, and a Subject line without extra advice.</span>
+            </li>
+            <li>
+              <strong>Academic Discussion</strong>
+              <span>Includes a professor's question, Student A response, Student B response, and a final prompt.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Practice rules and TOEFL-aligned guidance</p>
+            <p>
+              Beyond the three task types, I designed rules and guidance to keep the experience close to TOEFL-style
+              practice and prevent the AI from turning into an answer-writing helper.
+            </p>
+          </div>
+          <ol class="feature-list">
+            <li>
+              <strong>Task selection first</strong>
+              <span>The tutor must not present a task until the student chooses one of the three task types.</span>
+            </li>
+            <li>
+              <strong>One task at a time</strong>
+              <span>The assistant handles only one task at a time and must not mix rules or formats across tasks.</span>
+            </li>
+            <li>
+              <strong>Official time limits</strong>
+              <span>Automatically provides the correct Google timer link based on the selected task: 6 minutes for Task 1, 7 minutes for Task 2, and 10 minutes for Task 3.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel">
+            <p class="section-kicker">Interaction flow</p>
+            <p>
+              The tutor opens with a fixed message that sets expectations: students should finish each task in one
+              sitting and avoid dictionaries, grammar tools, or translation tools.
+            </p>
+            <ul class="insight-list">
+              <li>The student chooses Build a Sentence, Write an Email, or Academic Discussion.</li>
+              <li>The tutor immediately presents the selected task, provides the timer sentence and the correctly timed link, then stops.</li>
+              <li>The student opens the timer link and presses Start, so the countdown begins only when they are ready to write.</li>
+              <li>The tutor waits for the student's submission before giving any teaching, feedback, or sample answer.</li>
+              <li>After submission, feedback follows a fixed order so the experience stays predictable.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <p class="section-kicker">AI guardrails</p>
+            <p>
+              The prompt is intentionally strict because a helpful AI tutor can accidentally reduce practice quality by
+              giving hints, examples, or polished answers before the student has attempted the task.
+            </p>
+            <ul class="insight-list">
+              <li>Must not write answers for the student.</li>
+              <li>Must not teach grammar, vocabulary, strategies, or examples before submission.</li>
+              <li>Must not give numerical scores or predict TOEFL levels.</li>
+              <li>Must not change task definitions, rubrics, timer wording, or task formats.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="case-panel">
+          <div class="case-panel-heading">
+            <p class="section-kicker">Feedback design</p>
+            <p>
+              Feedback is allowed only after the student submits an answer. The sequence is designed to be useful without
+              turning the assistant into a score predictor or answer generator.
+            </p>
+          </div>
+          <div class="principle-grid">
+            <article>
+              <h3>Check constraints</h3>
+              <p>For Academic Discussion, the tutor first checks whether the response is outside the recommended 100-140 word range.</p>
+            </article>
+            <article>
+              <h3>Use rubric language</h3>
+              <p>The tutor gives qualitative feedback based on the official rubric without assigning numerical scores.</p>
+            </article>
+            <article>
+              <h3>Find patterns</h3>
+              <p>The tutor identifies 2-4 recurring error patterns so students know what to improve next.</p>
+            </article>
+            <article>
+              <h3>Model reachable writing</h3>
+              <p>The revised sample answer should be slightly above the student's level, not an overly advanced native-level rewrite.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-panel">
+            <p class="section-kicker">Prompt architecture</p>
+            <p>
+              After researching the TOEFL writing formats and feedback expectations, I translated those requirements
+              into mandatory rules, exact wording requirements, and prohibited behaviors so the AI would act like a
+              controlled practice environment instead of an open-ended writing helper.
+            </p>
+            <ul class="insight-list">
+              <li>Fixed opening message establishes the practice rules before task selection.</li>
+              <li>Timer rule requires exact sentence wording and matching official time limits.</li>
+              <li>Task-specific rules define required components for each practice format.</li>
+              <li>Feedback rules reflect rubric-based qualitative review rather than score prediction.</li>
+              <li>Allowed behaviors are separated from prohibited behaviors to reduce unwanted tutoring.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <p class="section-kicker">Learning design rationale</p>
+            <p>
+              The goal is to preserve productive struggle. Students still have to generate their own answers, but they
+              receive structured feedback after they have completed a realistic practice attempt.
+            </p>
+            <ul class="insight-list">
+              <li>Timed practice supports test-like pacing and writing stamina.</li>
+              <li>Delayed feedback protects independent performance before instruction begins.</li>
+              <li>Error-pattern feedback helps students focus revision effort without overwhelming them.</li>
+              <li>Level-appropriate sample answers make improvement feel reachable.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="case-panel">
+          <p class="section-kicker">Portfolio takeaway</p>
+          <p>
+            TOEFL AI Writing Tutor shows my ability to design AI-supported learning experiences with clear pedagogical
+            boundaries. Rather than using AI to replace student work, I used prompt design to protect practice integrity,
+            structure feedback, and make the tutor safer for exam preparation.
+          </p>
+          <ul class="insight-list">
+            <li>Researched TOEFL writing formats, task constraints, timing, and feedback expectations.</li>
+            <li>Designed and built a Custom GPT for TOEFL writing practice.</li>
+            <li>Created strict AI behavior rules that prevent premature answers, examples, hints, and scoring claims.</li>
+            <li>Balanced learner support with realistic timed practice and rubric-based feedback.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Chi Wen (Michelle) Lo</span>
+      <span>TOEFL AI Writing Tutor Case Study</span>
+    </footer>
+
+    <script src="script.js?v=11"></script>
+  </body>
+</html>
